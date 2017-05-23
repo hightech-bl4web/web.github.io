@@ -1,0 +1,36 @@
+body{
+    text-align: center;
+    background: url(../img/palm.png) repeat-y,
+    url(../img/palm.png) repeat-y,
+                   url(../img/road.jpeg) repeat-y;
+                   
+    background-position: 30% 50%,70% 50%,center;
+    height: 5000px;
+}
+.car {
+margin-top:10%;
+position: fixed;
+margin-left: -5%;
+}
+
+.text{
+    background: linear-gradient(to top, #000223, #f8a096);
+    border-radius: 20px;
+    width: 70px;
+    height: 35px;
+    position: fixed;
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+.textttt{
+    margin-top: 3%;
+     background: linear-gradient(to top, #000223, #f8a096);
+    border-radius: 20px;
+    width: 110px;
+    height: 45px;
+    position: fixed;
+    z-index: 2;
+    color: white;
+}

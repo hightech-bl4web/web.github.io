@@ -1,0 +1,47 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta content="utf-8"/>
+	<title>Untitled 1</title>
+    <link href="sbros.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+<p class="text">Форма<br/>обратной связи</p>
+<!--форма обратной связи-->
+<form class="main">
+<p> <input type= "email" id="email" name= "email" maxlength="30" placeholder="введите ваш E-mail*" required></p> 
+<div class="radio">
+<span>Пол</span><br/>
+<label>
+<input type="radio" name="sex" value="женский"> женский<br />
+</label>
+<label>
+<input type="radio" name="sex" value="мужской"> мужской<br />
+</label>
+</div>
+<div class="country">
+<label for="country">Страна</label>
+<select name="country" class="label">
+<option>Выберите страну проживания</option>
+<option value="">Беларусь</option>
+<option value="">Россия</option>
+<option value="">Украина</option>
+</select>
+</div>
+<div class="checkbox">
+ <p>Какими CMS вы пользуетесь?</p>
+   <label><input type="checkbox" name="option1" value="a1" checked>Joomla<Br></label>
+   <label><input type="checkbox" name="option2" value="a2">Wordpress<Br></label>
+   <label><input type="checkbox" name="option3" value="a3">Drupal<Br> </label>
+   <label><input type="checkbox" name="option4" value="a4">1С-Битрикс<Br> </label>
+</div>
+<p><textarea id="textarea" placeholder="введите ваше пожелание*"  required></textarea></p>
+<input type= "submit" class ="button" id="button" value= "отправить"> 
+</form>
+
+
+</body>
+</html>

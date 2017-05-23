@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+
+	<title>cod</title>
+<link rel="stylesheet" href="sbros.css" />
+<link rel="stylesheet" href="cod2.css" />
+</head>
+
+<body>
+<a href="../index.htm"><div class="text">Главная</div></a>
+<a href="gif2.htm"><div class="textt">Назад</div></a>
+<div class="block">
+<p>Для начала, нам необходимо реализовать самое простое, и именно оно будет выполнять большую часть поставленной задачи, речь идет о подключении видео на сайте, для этого у нас будет достаточно простая разметка, но в этом примере понадобиться немного js:</p>
+
+<pre class="t2">
+&lt;div id="set-height"&gt;
+&lt;video id="v0" tabindex="0" preload="preload"&gt;
+&lt;source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="video.webm"&gt;&lt;/source&gt;
+&lt;p>Извините, Ваш браузер не поддеривает  данный &lt;видео&gt; эффект.&lt;/p&gt;
+&lt;script src="js/index.js"&gt;&lt;/script&gt;
+&lt;/div&gt;
+</pre>
+<p class="t1">Так как видео мы уже подключили к странице, осталось дело за малым, а именно его стилизовать, нам необходимо, для начала, определить параметры контейнера, затем мы определяем стили для самого видео:</p>
+<pre class="t2">
+#set-height {
+  display: block;
+  height: 13500px;
+
+}
+.video{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</pre>
+<p class="t1">И так как видео управляется полосой прокрутки, добавим js:</p>
+<pre class="t2">
+// select video element
+var vid = document.getElementById('v0');
+//var vid = $('#v0')[0]; // jquery option
+
+// pause video on load
+vid.pause();
+ 
+// pause video on document scroll (stops autoplay once scroll started)
+window.onscroll = function(){
+    vid.pause();
+};
+
+// refresh video frames on interval for smoother playback
+setInterval(function(){
+    vid.currentTime = window.pageYOffset/400;
+}, 40);
+</pre>
+</div>
+</body>
+</html>

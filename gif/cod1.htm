@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+
+	<title>cod</title>
+    <link rel="stylesheet" href="sbros.css" />
+<link rel="stylesheet" href="cod.css" />
+</head>
+
+<body>
+<a href="../index.htm"><div class="text">Главная</div></a>
+<a href="gif.htm"><div class="textt">Назад</div></a>
+<div class="block">
+<p >Для начала, нам необходимо реализовать самое простое, и именно оно будет выполнять большую часть поставленной задачи, речь идет о подключении видео на сайте, для этого у нас будет достаточно простая разметка:</p>
+<pre class="t2">
+&lt;div id="set-height"&gt;
+&lt;video src="video.webm" autoplay loop class="video"&gt;&lt;/video&gt;
+&lt;/div&gt;
+</pre>
+<p class="t1">Так как видео мы уже подключили к странице, осталось дело за малым, а именно его стилизовать, нам необходимо, для начала, определить параметры контейнера, затем мы определяем стили для самого видео:</p>
+<pre class="t2">
+#set-height {
+  display: block;
+  height: 13500px;
+
+}
+.video{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</pre>
+</div>
+</body>
+</html>

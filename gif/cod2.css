@@ -1,0 +1,36 @@
+.text{
+    background: linear-gradient(to top, #000223, #f8a096);
+    border-radius: 20px;
+    width: 70px;
+    height: 35px; 
+    position: fixed;
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+.textt{
+    background: linear-gradient(to top, #000223, #f8a096);
+    border-radius: 20px;
+    width: 70px;
+    height: 35px;
+    position: fixed;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    margin-top: 45px;
+}
+.t1{
+   margin-top: 3%; 
+}
+.t2{
+    margin-top: 3%;
+    border: 3px solid;
+}
+.t2:last-child{
+    margin-bottom: 3%;
+}
+.block{
+    padding-top:10% ;
+    margin: 0 auto;
+  width: 70%;  
+}

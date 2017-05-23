@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8" />
+        <title>demo</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+			</head>
+	<body>			
+
+		<!-- Главная -->
+		<div id="home" class="content">
+
+
+<p>Все разделы, кроме #home, имеют класс panel. Здесь мы будем использовать переход всякий раз, когда элемент c этим  классом вызывается в меню. Трюк заключается в использовании отрицательного отступа в классе panel в "обычном" состоянии и отсутствии этого отступа у этого класса при использовании псевдо-класса :target. Переход создает эффект выезда страницы сверху:</p>
+<pre class="t2">
+.panel{
+ min-width: 100%;
+ height: 98%;
+ overflow-y: auto;
+ overflow-x: hidden;
+ margin-top: -150%;
+ position: absolute;
+ background: #000;
+ box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
+ z-index: 2;
+ -webkit-transition: all .8s ease-in-out;
+ -moz-transition: all .8s ease-in-out;
+ -o-transition: all .8s ease-in-out;
+ transition: all .8s ease-in-out;
+}
+.panel:target{
+ margin-top: 0%;
+ background-color: #ffcb00;
+}
+</pre>
+
+					</div>
+		<!-- /Главная -->
+		
+		<!-- Портфолио -->
+            <a href="../index.htm"><div class="text">Главная</div></a>	
+		<div id="portfolio" class="panel">
+			<div class="content">
+				<h2>текст</h2>
+			</div>
+		</div>
+		<!-- /Портфолио -->
+		
+		<!-- Описание -->
+            <a href="../index.htm"><div class="text">Главная</div></a>	
+		<div id="about" class="panel">
+			<div class="content">
+				<h2>текст</h2>
+				</div>
+		</div>
+		<!-- /Описание -->
+		
+		<!-- Контакт -->
+            <a href="../index.htm"><div class="text">Главная</div></a>	
+		<div id="contact" class="panel">
+			<div class="content">
+				<h2>текст</h2>
+			</div>
+		</div>
+		<!-- /Контакт -->
+            <a href="../index.htm"><div class="text">Главная</div></a>	
+		
+		<!-- Загловок с навигацией -->
+		<div id="header">
+			<ul id="navigation">
+				<li><a id="link-home" href="#home">код</a></li>
+				<li><a id="link-portfolio" href="#portfolio">1</a></li>
+				<li><a id="link-about" href="#about">2</a></li>
+				<li><a id="link-contact" href="#contact">3</a></li>
+			</ul>
+			<!-- Demo Nav -->
+			<nav id="codrops-demos">
+				<a class="current-demo" href="#home">Демо 1</a>
+				<a href="index2.html#home">Демо 2</a>
+				<a href="index3.html#home">Демо 3</a>
+			</nav>
+		</div>
+
+	</body>
+</html>
